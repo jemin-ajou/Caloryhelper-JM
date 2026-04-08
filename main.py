@@ -43,8 +43,7 @@ async def analyze_food(file: UploadFile = File(...)):
         image = Image.open(io.BytesIO(contents))
 
         # 제미나이 모델 설정 (Vision 모델 사용)
-        # gemini-1.5-flash 가 404가 뜰 경우를 대비해 -latest를 붙여 시도
-        model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        model = genai.GenerativeModel('gemini-3-flash-preview')
 
         # 시스템 지시어 (System Instruction)
         system_instruction = (
