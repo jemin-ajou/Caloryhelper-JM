@@ -1,5 +1,4 @@
 {
-  "devCommand": "uvicorn main:app --reload",
   "builds": [
     {
       "src": "main.py",
@@ -7,10 +6,6 @@
     }
   ],
   "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
     {
       "src": "/(.*)",
       "dest": "main.py"
